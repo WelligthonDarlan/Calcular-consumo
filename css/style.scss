@@ -1,0 +1,114 @@
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  header {
+    height: 10vh;
+  }
+  section {
+    width: 100%;
+    display: flex;
+    align-items: start;
+
+    #divResultArea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 50vh;
+      font-size: larger;
+
+      #resultArea {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        list-style-type: none;
+        padding: 40px;
+        color: #dddcc5;
+
+        #liConsumption {
+          font-size: x-large;
+          font-weight: 700;
+          list-style-type: none;
+        }
+
+        #liInfo {
+          padding: 2px;
+          font-size: 9px;
+          font-weight: 600;
+          list-style-type: none;
+          color: #848484;
+          display: flex;
+          text-align: start;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    #fuelPrice {
+      background-color: #e3ab09;
+      font-weight: 700;
+    }
+
+    #motorCycleContainer {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 5%;
+
+      #containerMotorcycleSlide {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      #scootersMotorcycle {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #cityMotorcycle {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #trailMotorcycle {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+footer {
+  background-color: #212529;
+  height: 30vh;
+}
+
+@media (max-width: 710px) {
+  #colCar {
+    width: 100%;
+  }
+  #infoUl {
+    display: none;
+    font-weight: 100;
+  }
+}
+@media (max-width: 370px) {
+  #iconHome {
+    display: none;
+  }
+}
