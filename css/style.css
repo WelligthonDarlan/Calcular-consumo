@@ -13,33 +13,59 @@ body section {
   display: flex;
   align-items: start;
 }
+
 body section #divResultArea {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   font-size: larger;
 }
 body section #divResultArea #resultArea {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: start;
+  align-items: start;
   list-style-type: none;
-  padding: 40px;
+  padding: 10%;
+  gap: 10px;
   color: #dddcc5;
 }
+
 body section #divResultArea #resultArea #liConsumption {
-  font-size: x-large;
+  font-size: 25px;
+  font-weight: 700;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+body section #divResultArea #resultArea #li2 {
+  font-size: 25px;
+  font-weight: 700;
+  list-style-type: none;
+}
+body section #divResultArea #resultArea #li3 {
+  font-size: 25px;
+  font-weight: 700;
+  list-style-type: none;
+}
+body section #divResultArea #resultArea #li4 {
+  font-size: 25px;
+  font-weight: 700;
+  list-style-type: none;
+}
+body section #divResultArea #resultArea #li5 {
+  font-size: 25px;
   font-weight: 700;
   list-style-type: none;
 }
 body section #divResultArea #resultArea #liInfo {
   padding: 2px;
-  font-size: 9px;
+  font-size: 22px;
   font-weight: 600;
   list-style-type: none;
   color: #848484;
@@ -87,7 +113,16 @@ body section #motorCycleContainer #trailMotorcycle {
 
 footer {
   background-color: #212529;
-  height: 30vh;
+  height: 10vh;
+}
+#containerFooter{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 710px) {
@@ -105,4 +140,12 @@ footer {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+.ancora{
+  text-decoration: none;
+  color: #ffffffad;
+}
+#copyright{
+  font-size: large;
+  color: #fff;
+}
+

@@ -21,6 +21,7 @@
   </head>
   <body>
     <header>
+      <!-- ------------------NAVBAR--⏬------------------ -->
       <nav class="navbar navbar-dark bg-dark fixed-top" >
         <div class="container-fluid align-items-center">
           <a class="navbar-brand" href="#home" id="iconHome"><img src="./img/fuel-station.png" width="30" height="30" class="d-inline-block align-top mx-2" alt="icon-fuel">
@@ -35,7 +36,6 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Barra de navegação -->
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Calculadora de consumo</h5>
@@ -44,25 +44,25 @@
             <div class="offcanvas-body" id="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <!-- link pagina -->
+                
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" id="navBarLink1">Inicio</a>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" ><a class="ancora" href="#">Inicio</a></button>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#fuelPrice" id="navBarLink2">Preço Gasolina</a>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" ><a class="ancora" href="#fuelPrice">Preço Gasolina</a></button>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#economyTips" id="navBarLink3">Economia de combustível</a>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" ><a class="ancora" href="#economyTips">Economia de combustível</a></button>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#economyVehicles" id="navBarLink4">Veículos mais econômicos</a>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" ><a class="ancora" href="#economyVehicles">Veículos mais econômicos</a></button>
                 </li>
-                <!-- link pagina -->
               </ul>
             </div>
           </div>
-          <!-- Barra de navegação -->
         </div>
       </nav>
+      <!-- ------------------NAVBAR--⏫------------------ -->
     </header>
     <section>
       <!-- CONTAINER SECTION -->
@@ -627,7 +627,11 @@
           </div>
       </div>
     </section>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="container-fluid" id="containerFooter">
+        <p id="copyright">Copyright © Welligthon Darlan.</p>
+      </div>
+    </footer>
     <!-- SCRIPT BOOTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

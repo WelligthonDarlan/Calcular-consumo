@@ -4,28 +4,29 @@ const distanceInKm = document.getElementById("distanceInKm");
 const selectDayWork = document.getElementById("selectDayWork");
 const resultArea = document.getElementById("resultArea");
 
-// document.getElementById("inicio").addEventListener("click", function () {
-//   var offcanvas = document.getElementById("offcanvas-body");
-//   var bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
-//   bsOffcanvas.hide();
+// document.getElementById("navBarLink1").addEventListener("click", function () {
+//   const navbar = document.getElementById("offcanvasDarkNavbar")
+//   navbar.classList.remove("offcanvas-backdrop");
+//   navbar.classList.remove("fade");
+//   navbar.classList.remove("show");
+// });
+// document.getElementById("navBarLink2").addEventListener("click", function () {
+//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
+// });
+// document.getElementById("navBarLink3").addEventListener("click", function () {
+//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
+// });
+// document.getElementById("navBarLink4").addEventListener("click", function () {
+//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
 // });
 
-document.getElementById("navBarLink1").addEventListener("click", function () {
-  document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-});
-document.getElementById("navBarLink2").addEventListener("click", function () {
-  document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-});
-document.getElementById("navBarLink3").addEventListener("click", function () {
-  document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-});
-document.getElementById("navBarLink4").addEventListener("click", function () {
-  document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-});
+
 
 // Função para escrever automaticamente em moeda Brasileira ao digitar ('BRL') - ATIVADA AO DIGITAR QUALQUER TECLA
 
-// Essa função chamada "moeda" é responsável por formatar um campo de entrada de texto para que ele exiba um valor monetário no formato de moeda brasileira (R$). Vou explicar passo a passo como ela funciona:
+// Essa função chamada "moeda" é responsável por formatar um campo de entrada de texto para que ele exiba um valor monetário no formato de moeda brasileira (R$). 
+
+//Vou explicar passo a passo como ela funciona ⏬:
 
 // A função recebe quatro parâmetros: "a", "e", "r" e "t". Esses parâmetros são utilizados dentro da função para realizar as operações.
 
@@ -43,9 +44,6 @@ document.getElementById("navBarLink4").addEventListener("click", function () {
 
 // A função retorna false para evitar que o caractere digitado seja exibido no campo de entrada.
 
-// Essa função é utilizada para formatar um campo de entrada de texto para exibir valores monetários no formato de moeda brasileira. É importante notar que essa função utiliza algumas convenções específicas, como o uso dos parâmetros "a", "e", "r" e "t", que podem ser definidos de acordo com o contexto em que a função é utilizada.
-
-// Espero que isso tenha esclarecido o funcionamento da função. Se tiver mais alguma pergunta, estou aqui para ajudar. E obrigado por ser um estudante da onebitcode, continue crescendo e aprendendo!
 
 function moeda(a, e, r, t) {
   let n = "",
