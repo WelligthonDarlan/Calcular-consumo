@@ -1,27 +1,3 @@
-const kilometerPerLiter = document.getElementById("kilometerPerLiter");
-const inputFuelPrice = document.getElementById("inputFuelPrice");
-const distanceInKm = document.getElementById("distanceInKm");
-const selectDayWork = document.getElementById("selectDayWork");
-const resultArea = document.getElementById("resultArea");
-
-// document.getElementById("navBarLink1").addEventListener("click", function () {
-//   const navbar = document.getElementById("offcanvasDarkNavbar")
-//   navbar.classList.remove("offcanvas-backdrop");
-//   navbar.classList.remove("fade");
-//   navbar.classList.remove("show");
-// });
-// document.getElementById("navBarLink2").addEventListener("click", function () {
-//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-// });
-// document.getElementById("navBarLink3").addEventListener("click", function () {
-//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-// });
-// document.getElementById("navBarLink4").addEventListener("click", function () {
-//   document.getElementById("offcanvasDarkNavbar").classList.remove("show");
-// });
-
-
-
 // Função para escrever automaticamente em moeda Brasileira ao digitar ('BRL') - ATIVADA AO DIGITAR QUALQUER TECLA
 
 // Essa função chamada "moeda" é responsável por formatar um campo de entrada de texto para que ele exiba um valor monetário no formato de moeda brasileira (R$). 
@@ -43,7 +19,6 @@ const resultArea = document.getElementById("resultArea");
 // A função verifica o tamanho da string "l" e realiza diferentes formatações com base nesse tamanho. Por exemplo, se o tamanho for 0, o valor do campo de entrada é limpo. Se o tamanho for 1, o valor é formatado como "R$ 0" + "r" + "0" + "l". Se o tamanho for maior que 2, a função realiza uma formatação mais complexa.
 
 // A função retorna false para evitar que o caractere digitado seja exibido no campo de entrada.
-
 
 function moeda(a, e, r, t) {
   let n = "",
@@ -72,7 +47,19 @@ function realToDolar(num) {
   return num;
 }
 
+const kilometerPerLiter = document.getElementById("kilometerPerLiter");
+const inputFuelPrice = document.getElementById("inputFuelPrice");
+const distanceInKm = document.getElementById("distanceInKm");
+const selectDayWork = document.getElementById("selectDayWork");
+const resultArea = document.getElementById("resultArea");
+
 const btnEqual = document.getElementById("btnEqual").addEventListener("click", function () {
+    // Verificar se algum dos campos de entrada está vazio
+    if (kilometerPerLiter.value === "" || inputFuelPrice.value === "" || distanceInKm.value === "") {
+      alert("Por favor, preencha todos os campos.");
+      return; // Sair da função imediatamente se algum campo estiver vazio
+    }
+
   let pricePerDay = ((distanceInKm.value / kilometerPerLiter.value) * realToDolar(inputFuelPrice.value)).toFixed(2);
   let pricePerWeek = (pricePerDay * selectDayWork.value).toFixed(2);
   let pricePerMonth = (pricePerWeek * 4).toFixed(2);
@@ -117,9 +104,6 @@ const btnEqual = document.getElementById("btnEqual").addEventListener("click", f
     resultArea.appendChild(li4);
     resultArea.appendChild(li5);
 
-    kilometerPerLiter.value = "";
-    inputFuelPrice.value = "";
-    distanceInKm.value = "";
     this.innerText = "Limpar";
     this.style.backgroundColor = "#dc3545";
     this.style.border = "#dc3545";
@@ -138,15 +122,17 @@ const btnEqual = document.getElementById("btnEqual").addEventListener("click", f
     resultArea.removeChild(li4);
     resultArea.removeChild(li5);
 
-    this.innerText = "Calcular";
-    this.style.backgroundColor = "#0d6efd";
-    this.style.border = "##0d6efd";
     kilometerPerLiter.value = "";
     inputFuelPrice.value = "";
     distanceInKm.value = "";
+    this.innerText = "Calcular";
+    this.style.backgroundColor = "#0d6efd";
+    this.style.border = "##0d6efd";
     this.href = "#col1";
 
     resultArea.style.backgroundColor = "";
     resultArea.style.boxShadow = "";
+
+
   }
 });
